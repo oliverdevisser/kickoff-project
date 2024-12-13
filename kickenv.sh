@@ -1,0 +1,1 @@
+source /Users/oliver/Desktop/kickoff-project/venv/bin/activate
