@@ -14,7 +14,7 @@ export default function RegisterPage() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, email, role, password }),
-      credentials: 'include'
+      credentials: 'include',
     });
 
     if (res.ok) {
@@ -31,24 +31,24 @@ export default function RegisterPage() {
         onSubmit={handleRegister}
         className="bg-white p-8 rounded shadow-md w-full max-w-sm"
       >
-        <h1 className="text-2xl font-bold mb-6">Register</h1>
+        <h1 className="text-2xl font-bold mb-6 text-gray-800">Register</h1>
         <input
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          className="border border-gray-300 rounded w-full p-2 mb-4"
+          className="border border-gray-300 rounded w-full p-2 mb-4 text-gray-800 font-medium"
         />
         <input
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="border border-gray-300 rounded w-full p-2 mb-4"
+          className="border border-gray-300 rounded w-full p-2 mb-4 text-gray-800 font-medium"
         />
         <select
           value={role}
           onChange={(e) => setRole(e.target.value)}
-          className="border border-gray-300 rounded w-full p-2 mb-4"
+          className="border border-gray-300 rounded w-full p-2 mb-4 text-gray-800 font-medium"
         >
           <option value="individual">Individual</option>
           <option value="club_admin">Club Admin</option>
@@ -58,7 +58,7 @@ export default function RegisterPage() {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="border border-gray-300 rounded w-full p-2 mb-4"
+          className="border border-gray-300 rounded w-full p-2 mb-4 text-gray-800 font-medium"
         />
         <button
           type="submit"

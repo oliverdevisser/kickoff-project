@@ -4,7 +4,8 @@ from decouple import config
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = config('SECRET_KEY')  # Read the secret key from the .env file
-
+STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')
+STRIPE_WEBHOOK_SECRET = config('STRIPE_WEBHOOK_SECRET')
 
 DATABASES = {
     'default': {
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'users',  # Add your custom users app here
+    'subscriptions',
 ]
 
 AUTH_USER_MODEL = 'users.User'
